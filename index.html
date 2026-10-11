@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Análogos · NASA Space Apps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Chakra+Petch:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="boot"><span>Inicializando sistema</span></div>
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="vig"></div>
+<div class="cols" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="top">
+  <a href="#" class="logo" aria-label="Análogos">
+    <svg viewBox="0 0 100 100"><defs><path id="c" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs>
+    <text><textPath href="#c">ANÁLOGOS · NASA SPACE APPS · ANÁLOGOS · NASA SPACE APPS ·</textPath></text>
+    <path d="M38 62 L50 34 L62 62 M43 54 H57" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+  </a>
+  <nav><a href="#explorer">_Explorador</a><a href="#modules">_Módulos</a><a href="#about">_Proyecto</a></nav>
+</header>
+<aside class="idx" id="idx"></aside>
+<aside class="tele" id="tele"></aside>
+<div id="callout"><i></i><b></b><small></small></div>
+
+<main>
+  <section class="ch hero">
+    <div class="ct">
+      <div class="lab">NASA Space Apps Challenge</div>
+      <h1><span class="l"><span>BioSpace,</span></span><span class="l"><span>NASA</span></span><span class="l"><span>Space Apps 2026</span></span></h1>
+      <p>Comparamos sitios de la Luna y Marte con lugares reales de la Tierra y medimos cuánto se parecen.</p>
+    </div>
+    <div class="cue"><i></i>Desliza para iniciar</div>
+  </section>
+  <div id="chs"></div>
+
+  <section id="explorer">
+    <div class="xw">
+      <div class="lab">05 — Explorar similitud</div>
+      <h2 class="big">Elige un destino</h2>
+      <div class="row" id="bodies"></div>
+      <div class="row" id="sites"></div>
+      <div class="lab">Perfil de usuario</div>
+      <div class="row" id="profiles"></div>
+      <div class="panel" id="target"></div>
+      <div class="panel" id="results"></div>
+      <p class="hint">Valores de ejemplo hasta cargar los datos reales (ver “Estado”).</p>
+    </div>
+  </section>
+
+  <section id="modules">
+    <h2 class="big sm">Módulos del proyecto</h2>
+    <p class="sub">Funciones planeadas. Las que no están listas muestran “No disponible por el momento”.</p>
+    <div class="mgrid" id="mgrid"></div>
+  </section>
+
+  <section id="about">
+    <div class="xw">
+      <h2 class="big sm">Qué es este proyecto</h2>
+      <p class="sub">Buscamos lugares de la Tierra con condiciones parecidas a las de zonas donde podrían construirse bases permanentes en la Luna y Marte. Se comparan geología, radiación, topografía, temperatura, hielo, presión y actividad volcánica, y se obtiene un índice de similitud con el detalle de cada variable.</p>
+      <h3 class="lab">Estado del sitio (versión 0.1)</h3>
+      <ul class="status">
+        <li class="ok">Listo: </li>
+        <li class="todo">Pendiente: texturas reales de NASA, datos reales de Andrés en <code>js/data.js</code>.</li>
+        <li class="todo">Pendiente: fichas de los sitios terrestres, terreno 3D con heightmaps, modo rover.</li>
+        <li class="todo">Pendiente: sección de equipo, branding final, enlaces a presentación y video.</li>
+      </ul>
+    </div>
+    <footer>NASA Space Apps · proyecto en desarrollo</footer>
+  </section>
+</main>
+
+<dialog id="mdlg"><h3 id="mt"></h3><p class="tag">No disponible por el momento</p><p id="md"></p><p class="who" id="mw"></p><button id="mc">Cerrar</button></dialog>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/modules.js"></script>
+</body>
+</html>
